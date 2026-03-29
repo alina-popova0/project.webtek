@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <title>Contact Form</title>
+</head>
+<body>
+
+<h1>Contact Form</h1>
+
+<form action="#" method="post">
+
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+  <br>
+
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+  <br>
+
+  <label for="country">Country</label>
+  <select id="country" name="country">
+    <option value="finland">Finland</option>
+    <option value="sweden">Sweden</option>
+    <option value="norway">Norway</option>
+  </select>
+  <br><br>
+
+  <!-- Added fields (task step 4) -->
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="name@example.com" required>
+  <br>
+
+  <label for="phone">Phone</label>
+  <input type="tel" id="phone" name="phone" placeholder="+358401234567">
+  <br>
+
+  <label for="street">Street address</label>
+  <input type="text" id="street" name="street" placeholder="Street and number">
+  <br>
+
+  <label for="zip">ZIP code</label>
+  <input type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="65100">
+  <br>
+
+  <label for="city">City</label>
+  <input type="text" id="city" name="city" placeholder="Vaasa">
+  <br><br>
+
+  <!-- Radio buttons -->
+
+  <p>Feedback type</p>
+
+  <input type="radio" id="q" name="type" value="question">
+  <label for="q">Question</label><br>
+
+  <input type="radio" id="fb" name="type" value="feedback">
+  <label for="fb">Feedback</label><br>
+
+  <input type="radio" id="bug" name="type" value="bug">
+  <label for="bug">Bug report</label>
+  <br><br>
+
+  <!-- Checkboxes -->
+
+  <p>Preferred contact method</p>
+
+  <input type="checkbox" id="cemail" name="contact" value="email">
+  <label for="cemail">Email</label><br>
+
+  <input type="checkbox" id="cphone" name="contact" value="phone">
+  <label for="cphone">Phone</label>
+  <br><br>
+
+  <label for="subject">Subject</label><br>
+  <textarea id="subject" name="subject" placeholder="Write something.." rows="6" cols="40"></textarea>
+  <br>
+
+  <button type="submit">Submit Form</button>
+  <button type="reset">Reset</button>
+
+</form>
+
+</body>
+</html>

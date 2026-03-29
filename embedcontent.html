@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Embedded content HTML-sivulla | Video, kartta ja media</title>
+
+<meta name="description" content="Esimerkkisivu, joka näyttää miten erilaisia sisältöjä kuten YouTube-videoita, Google Maps -karttoja sekä HTML5 video- ja audioelementtejä voidaan upottaa HTML-sivulle.">
+
+<style>
+body{
+margin:0;
+font-family: Arial, Helvetica, sans-serif;
+background:#f4f6f8;
+color:#1f2937;
+line-height:1.5;
+}
+header{
+background: linear-gradient(90deg, #0ea5e9, #22c55e);
+color:white;
+padding:28px 16px;
+text-align:center;
+}
+header h1{ margin:0 0 6px 0; }
+header p{ margin:0; opacity:0.95; }
+
+.container{
+max-width: 980px;
+margin: 0 auto;
+padding: 18px 16px 40px;
+}
+
+nav{
+background:white;
+border-radius: 14px;
+padding: 14px 16px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+margin-top: -18px;
+}
+nav h2{
+margin: 0 0 8px 0;
+font-size: 18px;
+}
+.navlinks{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+.navlinks a{
+text-decoration:none;
+background:#eef2ff;
+color:#1f2937;
+padding:8px 10px;
+border-radius: 10px;
+font-size: 14px;
+}
+.navlinks a.active{
+background:#111827;
+color:white;
+}
+
+main{ margin-top: 18px; }
+
+.card{
+background:white;
+border-radius: 14px;
+padding: 16px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+margin-bottom: 16px;
+}
+.card h2{
+margin:0 0 6px 0;
+font-size: 20px;
+}
+.muted{ color:#6b7280; margin-top:0; }
+
+.embed{
+margin-top: 10px;
+border-radius: 12px;
+overflow:hidden;
+border: 1px solid #e5e7eb;
+background:#000;
+}
+.embed iframe{
+display:block;
+width:100%;
+height: 340px;
+border:0;
+}
+
+video{
+width:100%;
+max-width: 100%;
+border-radius: 12px;
+border: 1px solid #e5e7eb;
+background:#000;
+}
+
+.controls{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+align-items:center;
+margin-top: 12px;
+}
+button{
+border:0;
+background:#111827;
+color:white;
+padding:10px 12px;
+border-radius: 10px;
+cursor:pointer;
+font-size: 14px;
+}
+button.secondary{
+background:#e5e7eb;
+color:#111827;
+}
+button:active{ transform: translateY(1px); }
+
+audio{
+width:100%;
+margin-top: 8px;
+}
+
+footer{
+text-align:center;
+padding: 24px 16px;
+color:#6b7280;
+}
+
+@media (max-width: 520px){
+.embed iframe{ height: 240px; }
+nav h2{ font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Embedded content</h1>
+<p>Tällä sivulla kokeillaan erilaisten sisältöjen upottamista HTML-sivulle.</p>
+</header>
+
+<div class="container">
+
+<nav>
+<h2>Navigation</h2>
+<div class="navlinks">
+<a href="index.html">Frontpage</a>
+<a href="headingtest.html">Headers</a>
+<a href="listtest.html">Lists</a>
+<a href="picturetest.html">Pictures</a>
+<a href="espoolinks.html">Links</a>
+<a href="taulukot.html">Tables (Vaasa departures)</a>
+<a href="textformatting.html">Text formatting</a>
+<a href="contactform.html">Contact form</a>
+<a class="active" href="embedcontent.html">Embedded content</a>
+</div>
+</nav>
+
+<main>
+
+<section class="card">
+<h2>YouTube-video (iframe)</h2>
+<p class="muted">Video on upotettu YouTubesta iframe-koodilla.</p>
+
+<div class="embed">
+<iframe
+src="https://www.youtube.com/embed/FQdaUv95mR8"
+title="HTML tutorial video YouTubesta"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+</div>
+</section>
+
+<section class="card">
+<h2>Google Maps — TAMK</h2>
+<p class="muted">Kartta on upotettu Google Maps -palvelusta.</p>
+
+<div class="embed">
+<iframe
+src="https://www.google.com/maps?q=Tampere%20University%20of%20Applied%20Sciences%20TAMK&output=embed"
+title="Kartta Tampere University of Applied Sciences TAMK"
+loading="lazy">
+</iframe>
+</div>
+</section>
+
+<footer>
+<p>Tampere University of Applied Sciences (TAMK)</p>
+<p>Page created in <time datetime="2026">2026</time></p>
+</footer>
+
+</body>
+</html>
